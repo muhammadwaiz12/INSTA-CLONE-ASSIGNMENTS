@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    border-bottom: 1px solid palevioletred;
+}
+
+.nav {
+    position: sticky;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    height: 75px;
+}
+
+.nav img {
+    width: 150px;
+}
+
+.icons img {
+    margin-right: 5px;
+    width: 25px;
+}
+
+.search img {
+    width: 15px;
+    margin: 0 0 0 10px;
+}
+
+.search {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    width: 80%;
+    height: 30px;
+    background-color: transparent;
+    font-size: 18px;
+    padding: 5px;
+    color: rgb(80, 80, 80);
+}
+
+.search input::placeholder {
+    font-size: 15px;
+    color: gray;
+}
+
+.ex1::-webkit-scrollbar {
+    background-color: rgba(245, 245, 245, 0.308);
+}
+
+div.ex1 {
+    width: 80%;
+    border-radius: 20px;
+    margin: 20px auto;
+    overflow-x: scroll;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 250px;
+    height: 100%;
+    padding: 40px 10px 30px 10px;
+    background: #ffffff;
+    border-right: 1px solid #dbdbdb;
+    transition: 0.3s;
+}
+
+.sidebar-header {
+    width: 100%;
+    margin-bottom: 44px;
+}
+
+
+.sidebar button {
+    height: 60px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    width: 80%;
+}
+
+.sidebar button>span {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 0 12px;
+    border-radius: 24px;
+    line-height: 1;
+}
+
+.sidebar button:hover>span {
+    background: #f2f2f2;
+}
+
+.sidebar button:hover>span :is(i, img) {
+    scale: 1.05;
+}
+
+.sidebar button>span>span {
+    transition: 0.3s;
+}
+
+@media (width < 580px) {
+    .sidebar {
+        display: none;
+    }
+
+    .search input {
+        display: none;
+    }
+
+    .search {
+        background-color: transparent;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .end {
+        display: none;
+    }
+
+    .bottom {
+        display: none;
+    }
+}
+
+@media (width < 770px) {
+    .icons img {
+        display: none;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .search {
+        margin-left: 20px;
+    }
+}
+
+.logo-icon {
+    display: none;
+    font-size: 28px;
+    height: 35px;
+    width: 51px;
+    text-align: center;
+}
+
+.logo-img {
+    margin-left: 14px;
+    width: 120px;
+}
+
+.logo-img {
+    display: none;
+}
+
+.logo-icon {
+    display: block;
+}
+
+.sidebar {
+    width: 72px;
+}
+
+.sidebar button {
+    width: 55px;
+}
+
+.sidebar button>span {
+    width: 50px;
+}
+
+.sidebar button>span>span {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sidebar button i {
+    position: relative;
+    font-size: 28px;
+    transition: 0.2s;
+}
+
+.sidebar button img {
+    width: 28px;
+    height: 28px;
+    transition: 0.2s;
+}
+
+.sidebar button i>span {
+    display: grid;
+    place-items: center;
+    height: 20px;
+    padding: 0 4px;
+    border-radius: 10px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    border: 1px solid #ffffff;
+    background: #ff2f40;
+    color: #f9f9f9;
+    font-size: 12px;
+    font-family: BlinkMacSystemFont;
+    font-style: normal;
+}
+
+.sidebar button i>em {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 2px;
+    right: -1px;
+    border: 1px solid #ffffff;
+    background: #ff2f40;
+    color: #f9f9f9;
+    font-size: 12px;
+    font-family: BlinkMacSystemFont;
+    font-style: normal;
+}
+
+.sidebar button span {
+    font-size: 17px;
+}
+
+.sidebar>nav {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sidebar>nav button:last-child {
+    margin-top: auto;
+}
+
+
+.ex1 div img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border: 5px solid pink
+}
+
+.container {
+    width: 70%;
+    background-color: white;
+    border: none;
+    border-radius: 0px;
+    border: 1px solid rgb(202, 202, 202);
+    margin: 0 auto;
+    padding: 25px 10px 35px;
+    margin-bottom: 20px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.name img {
+    width: 70px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.name .author {
+    display: flex;
+    align-items: center;
+}
+
+.author h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.author .div {
+    background-color: #aad4ed;
+    text-shadow: 1px 1px 8px gray;
+    color: white;
+    font-weight: bold;
+    height: 30px;
+    text-align: center;
+    width: 30px;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.img {
+    width: 100%;
+}
+
+.img img {
+    width: 100%;
+}
+
+/* likes */
+.likes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.first {
+    display: flex;
+    align-items: center;
+}
+
+.first img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.first span {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.second button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    transition: all 1s ease;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.second button:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.date,
+.views {
+    color: gray;
+    margin-top: 10px;
+}
+
+.views {
+    margin-bottom: 10px;
+}
+
+.desc {
+    font-size: 20px;
+    word-spacing: 3px;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 90%
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .setting {
+        display: none;
+    }
+
+    .name img {
+        width: 50px;
+        margin-right: 10px;
+    }
+
+    .likes img {
+        width: 30px;
+    }
+}
+
+.end {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgba(255, 192, 203, 0.233);
+}
+
+.top a {
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 17px;
+    color: rgb(255, 192, 224);
+    text-decoration: none;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgba(230, 230, 230, 0.4);
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    left: 0;
+    padding: 10px 0;
+}
+
+.bottom i {
+    font-size: 30px;
+}
+
+.bottom img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 375px) {
+    .babar h1 {
+        font-size: 25px;
+    }
+
+    .babar p {
+        font-size: 15px;
+    }
+}
+
+div.bottom {
+    display: none;
+}
+
+@media screen and (max-width: 580px) {
+    div.bottom {
+        display: flex;
+    }
+}
